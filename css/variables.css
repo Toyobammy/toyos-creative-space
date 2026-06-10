@@ -1,0 +1,89 @@
+:root {
+  --color-page-bg: #EBEBEB;
+  --color-primary: #7D52F4;
+  --color-primary-dark: #5D4580;
+  --color-primary-light: #AB87FF;
+  --color-accent-pink: #FB4BA3;
+  --color-accent-pink-dark: #D8397B;
+  --color-accent-pink-light: #FFB3C6;
+  --color-text-primary: #1C1C1C;
+  --color-text-secondary: #5C5C5C;
+  --color-text-description: #333333;
+  --color-text-link: #5E5E5E;
+  --color-neutral-800: #2D2D2D;
+  --color-text-inverse: #F7F7F7;
+  --color-text-on-primary: #FFFFFF;
+  --color-white: #FFFFFF;
+  --color-black: #1C1C1C;
+  --color-border: #171717;
+  --color-border-light: #E6E6E6;
+  --color-blue-underline: #173DFF;
+  --color-pink-underline: #FB4BA3;
+  --color-purple-underline: #7D52F4;
+  --color-grass: #019F4B;
+  --color-teeny-circle: #A897FF;
+  --color-shell-pink: #DD5498;
+  --color-shell-yellow: #E6A819;
+  --color-water: #35ADE9;
+  --color-water-light: #A3D5FF;
+  --color-water-medium: #6BB6FF;
+  --color-water-deep: #4A90E2;
+  --color-sand: #FBDCA6;
+  --color-green-reef: #1DAF61;
+  --color-green-seaweed: #16643B;
+  --color-purple-coral: #7D52F4;
+  --color-purple-dark: #3D1D86;
+  --color-yellow-reef: #F6B51E;
+  --color-orange-reef: #FA7319;
+  --color-pink-mushroom: #FB4BA3;
+  --color-pink-highlight: #FF97CB;
+  --color-purple-mushroom: #5B2CC9;
+  --color-purple-highlight: #8C71F6;
+  --color-bubble: #66A5D0;
+  --color-rock: #5C5C5C;
+  --color-fish-orange: #F6B51E;
+  --color-fish-green: #1FC16B;
+  --color-floater-pink: #FF74A6;
+  --color-floater-water: #07C2FF;
+  --color-footer-bg: #F7F3FF;
+
+  --font-family-display: 'Emilys Candy', cursive;
+  --font-family-primary: 'Urbanist', sans-serif;
+  --font-family-nav: 'Manrope', sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-card: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 20px;
+  --radius-full: 100px;
+  --radius-circle: 1000px;
+
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --shadow-purple: 0px 10px 20px 3px rgba(0,0,0,0.05);
+
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-s: 12px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 96px;
+
+  --duration-fast: 0.2s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.4s;
+  --ease-default: ease;
+  --ease-out: ease-out;
+  --ease-in-out: ease-in-out;
+}
