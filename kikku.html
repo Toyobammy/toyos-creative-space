@@ -15,12 +15,26 @@
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Mobile Menu Overlay — exact copy from index.html, hrefs updated for sub-page -->
+  <!-- Mobile Menu Overlay -->
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-    <a href="index.html#projects" class="mobile-menu__link">Works</a>
-    <a href="about.html" class="mobile-menu__link">About</a>
-    <a href="https://drive.google.com/file/d/1CQYjmtOOulWqzke0gi_U4UttHId4qYxD/view?usp=drive_link" class="mobile-menu__link" target="_blank" rel="noopener noreferrer">Resume</a>
-    <a href="https://cal.com/toyoscreativespace/project-discovery-call" class="mobile-menu__btn" target="_blank" rel="noopener noreferrer" aria-label="Book a call (opens in new tab)">Book a Call</a>
+    <div class="mobile-menu__header">
+      <a href="index.html" class="mobile-menu__logo">
+        <img src="portfolio-design-images/tcs-logo.png" alt="Toyo's Creative Space home">
+      </a>
+      <button class="mobile-menu__close" aria-label="Close navigation menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 2L2 16M2 2L16 16" stroke="#292929" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="index.html#projects" class="mobile-menu__link">Works</a>
+      <a href="about.html" class="mobile-menu__link">About</a>
+      <a href="https://drive.google.com/file/d/1CQYjmtOOulWqzke0gi_U4UttHId4qYxD/view?usp=drive_link" class="mobile-menu__link" target="_blank" rel="noopener noreferrer">Resume</a>
+    </nav>
+    <div class="mobile-menu__actions">
+      <a href="https://cal.com/toyoscreativespace/project-discovery-call" class="mobile-menu__btn" target="_blank" rel="noopener noreferrer" aria-label="Book a call (opens in new tab)">&#128197; Book a Call &rarr;</a>
+    </div>
   </div>
 
   <!-- Navigation — exact copy from index.html; Works link gets active state -->
@@ -127,36 +141,46 @@
 
         <!-- ======================================================
              SECTION 3 — CHALLENGES  |  Star: orange
-             Layout: text LEFT, image RIGHT
+             Layout: text card LEFT, image RIGHT
              ====================================================== -->
         <section id="challenges" class="cs-section">
           <div class="cs-section__header">
             <img src="about-assets/orange star.png" alt="" class="cs-star-img" aria-hidden="true">
             <h2 class="cs-section__title">Challenges</h2>
           </div>
-          <img
-            src="kikku-project/problem.png"
-            alt="Challenges: difficulty finding products and unreliable delivery tracking"
-            class="cs-full-image"
-            loading="lazy"
-          >
+          <div class="cs-split-card cs-split-card--text-left">
+            <div class="cs-split-card__text">
+              <p>We found that product discovery was slow and frustrating due to weak filtering and sorting features. Delivery tracking was also unclear and unreliable, with vague updates, missed deadlines, and notifications that prioritized promos over order status.</p>
+            </div>
+            <img
+              src="kikku-project/assets/challenges-img.svg"
+              alt="Illustration of product discovery and delivery tracking challenges"
+              class="cs-split-card__img"
+              loading="lazy"
+            >
+          </div>
         </section>
 
         <!-- ======================================================
              SECTION 4 — SOLUTIONS  |  Star: blue
-             Layout: image LEFT, text RIGHT
+             Layout: image LEFT, text card RIGHT
              ====================================================== -->
         <section id="solutions" class="cs-section">
           <div class="cs-section__header">
             <img src="about-assets/blue star.png" alt="" class="cs-star-img" aria-hidden="true">
             <h2 class="cs-section__title">Solutions</h2>
           </div>
-          <img
-            src="kikku-project/solution.png"
-            alt="Solutions: improved delivery tracking and product discovery"
-            class="cs-full-image"
-            loading="lazy"
-          >
+          <div class="cs-split-card cs-split-card--img-left">
+            <img
+              src="kikku-project/assets/solutions-img.svg"
+              alt="Illustration of improved delivery tracking and product discovery solutions"
+              class="cs-split-card__img"
+              loading="lazy"
+            >
+            <div class="cs-split-card__text">
+              <p>We simplified delivery tracking by introducing milestone updates, real-time map tracking, and timely notifications at every stage. Product discovery was improved with clearer categories, advanced filters, and voice search, making it faster and easier for users to find what they need.</p>
+            </div>
+          </div>
         </section>
 
         <!-- ======================================================
@@ -168,18 +192,83 @@
             <h2 class="cs-section__title">User Personas</h2>
           </div>
           <div class="cs-personas-stack">
-            <img
-              src="kikku-project/User profile 1.png"
-              alt="User persona: Zainab Mohammed — 40 years old, stay at home mom, Abuja, Nigeria"
-              class="cs-full-image"
-              loading="lazy"
-            >
-            <img
-              src="kikku-project/User profile 2.png"
-              alt="User persona: Michael Adebayo — 33 years old, City Lawyer, Ibadan, Nigeria"
-              class="cs-full-image"
-              loading="lazy"
-            >
+
+            <!-- Persona 1: Zainab — image LEFT, content RIGHT -->
+            <div class="cs-persona-card">
+              <img
+                src="kikku-project/assets/case-study-1.svg"
+                alt="Zainab Mohammed — 40 years old, stay at home mom, Abuja Nigeria"
+                class="cs-persona-img"
+                loading="lazy"
+              >
+              <div class="cs-persona-content">
+                <p class="cs-persona-bio">Zainab is a mother of two. She uses Kikku to buy clothes, toys and school supplies for her kids.</p>
+                <div class="cs-persona-section">
+                  <h3 class="cs-persona-section__title">Goals</h3>
+                  <ul class="cs-persona-goals">
+                    <li>Affordable bulk shopping for her family</li>
+                    <li>To quickly find items (clothes, toys and school supplies) without endless scrolling</li>
+                    <li>Plan deliveries around kids' routines</li>
+                  </ul>
+                </div>
+                <div class="cs-persona-section">
+                  <h3 class="cs-persona-section__title">Pain Points</h3>
+                  <ul class="cs-persona-list">
+                    <li>Unreliable delivery tracking makes it hard to know when packages will arrive</li>
+                    <li>Search results feel cluttered and irrelevant, wasting her time</li>
+                    <li>Difficult to reach support when orders go wrong</li>
+                    <li>Returns and refunds are unclear</li>
+                  </ul>
+                </div>
+                <div class="cs-persona-section">
+                  <h3 class="cs-persona-section__title">Needs</h3>
+                  <ul class="cs-persona-list">
+                    <li>Trustworthy delivery estimates with real-time updates</li>
+                    <li>Smarter product search &amp; filters (e.g. by size or category)</li>
+                    <li>Responsive customer service for issues with orders</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Persona 2: Michael — content LEFT, image RIGHT -->
+            <div class="cs-persona-card cs-persona-card--reversed">
+              <div class="cs-persona-content">
+                <p class="cs-persona-bio">Michael is a busy lawyer who relies heavily on Kikku to handle everything from grocery deliveries to clothing, gifts, and more.</p>
+                <div class="cs-persona-section">
+                  <h3 class="cs-persona-section__title">Goals</h3>
+                  <ul class="cs-persona-goals">
+                    <li>Get products quickly and reliably without leaving work or home</li>
+                    <li>Find the exact item he needs without wasting time searching</li>
+                    <li>Enjoy a smooth, stress-free shopping experience</li>
+                  </ul>
+                </div>
+                <div class="cs-persona-section">
+                  <h3 class="cs-persona-section__title">Pain Points</h3>
+                  <ul class="cs-persona-list">
+                    <li>Delivery delays and inaccurate tracking disrupt his busy schedule</li>
+                    <li>Hard-to-navigate search means he spends too much time finding products</li>
+                    <li>Failed payments and no quick resolution adds to frustration</li>
+                    <li>Doesn't have time to chase customer service</li>
+                  </ul>
+                </div>
+                <div class="cs-persona-section">
+                  <h3 class="cs-persona-section__title">Needs</h3>
+                  <ul class="cs-persona-list">
+                    <li>Fast and reliable delivery tracking with clear status updates</li>
+                    <li>Efficient, accurate search with predictive results &amp; filters</li>
+                    <li>Seamless payments and quick issue resolution</li>
+                  </ul>
+                </div>
+              </div>
+              <img
+                src="kikku-project/assets/case-study-2.svg"
+                alt="Michael Adebayo — 33 years old, City Lawyer, Ibadan Nigeria"
+                class="cs-persona-img"
+                loading="lazy"
+              >
+            </div>
+
           </div>
         </section>
 
@@ -316,26 +405,19 @@
             <h2 class="cs-section__title">Key Features</h2>
           </div>
 
-          <!-- BLOCK 1: Search & Categories — composed image (UI frame + tilted phone) + text -->
-          <div class="kf-block">
-            <div class="kf-block__top">
-              <img
-                src="kikku-project/key features one.png"
-                alt="Composed image: search and categories UI frame top-right, tilted phone showing kikku home screen with search bar, categories and Gadget Rush Sales banner bottom-left"
-                class="kf-frame-img"
-                style="border-radius: 0; box-shadow: none;"
-                loading="lazy"
-              >
-              <div class="kf-block__text">
-                <p class="kf-para">We designed a cleaner home screen with the search bar for better accessibility. Categories were simplified into a horizontal scroll with consistent icons and clear labels.</p>
-                <p class="kf-para">We also introduced a modern promotional banner and clear call-to-action to highlight ongoing deals without overwhelming users.</p>
-              </div>
-            </div>
+          <!-- BLOCK 1: Search & Categories — full-width composed image (text baked in from Figma) -->
+          <div class="kf-block kf-block--full">
+            <img
+              src="kikku-project/key features one.png"
+              alt="Composed image: search and categories UI frame top-right, tilted phone showing kikku home screen with search bar, categories and Gadget Rush Sales banner bottom-left"
+              class="kf-frame-img"
+              loading="lazy"
+            >
           </div>
 
-          <!-- BLOCK 2: Product Section — UI frame + text → arrow → phone mockup -->
+          <!-- BLOCK 2: Product Section — card TOP, text BELOW, phone mockup below text -->
           <div class="kf-block">
-            <div class="kf-block__top">
+            <div class="kf-block__top kf-block__top--stacked">
               <img
                 src="kikku-project/Product Section 2.png"
                 alt="Flat UI showing Recommended For You horizontal product cards with prices and star ratings"
@@ -348,7 +430,7 @@
                 <p class="kf-para">Discounted prices are emphasised with strikethrough and ratings are represented with visual icons to enhance quick decision-making.</p>
               </div>
             </div>
-            <div class="kf-block__mockup" style="width: calc(100% - 260px); max-width: 900px; margin-left: 40px; overflow: visible;">
+            <div class="kf-block__mockup kf-block__mockup--order">
               <img
                 src="kikku-project/kikku order screen.png"
                 alt="Hand holding phone showing the order tracking screen"
@@ -358,21 +440,21 @@
             </div>
           </div>
 
-          <!-- BLOCK 3: Order Tracking — UI frame + text → arrow → phone mockup -->
+          <!-- BLOCK 3: Order Tracking — text LEFT, UI frame RIGHT -->
           <div class="kf-block">
-            <div class="kf-block__top">
-              <img
-                src="kikku-project/Delivery timeline.png"
-                alt="Order timeline card: placed 19 Dec, In Progress 20 Dec, Shipped 21 Dec, Delivered 23 Dec"
-                class="kf-frame-img"
-                loading="lazy"
-              >
+            <div class="kf-block__top kf-block__top--reversed">
               <div class="kf-block__text">
                 <p class="kf-para">We redesigned the order tracking timeline to provide clear, accessible status updates directly within the user's workflow.</p>
                 <p class="kf-para">The new design features a vertical timeline with distinct status indicators accompanied by precise timestamps that give users confidence about their delivery progress.</p>
               </div>
+              <img
+                src="kikku-project/assets/Delivery%20timeline.svg"
+                alt="Order timeline card: placed 19 Dec, In Progress 20 Dec, Shipped 21 Dec, Delivered 23 Dec"
+                class="kf-frame-img"
+                loading="lazy"
+              >
             </div>
-            <div class="kf-block__mockup">
+            <div class="kf-block__mockup kf-block__mockup--right">
               <img
                 src="kikku-project/kikku mockup order details.png"
                 alt="Tilted phone mockup showing live map tracking screen with delivery route across Abuja"
@@ -382,9 +464,9 @@
             </div>
           </div>
 
-          <!-- BLOCK 4: Live Map Tracking — UI frame + text → arrow → phone mockup -->
+          <!-- BLOCK 4: Live Map Tracking — UI frame left, text right -->
           <div class="kf-block">
-            <div class="kf-block__top">
+            <div class="kf-block__top kf-block__top--sm-img">
               <img
                 src="kikku-project/Live Map.png"
                 alt="Live delivery route map showing orange dashed route across Abuja with 80 minute ETA"
@@ -392,17 +474,10 @@
                 loading="lazy"
               >
               <div class="kf-block__text">
-                <p class="kf-para">Beyond static status updates, we integrated real-time location tracking that gives users complete visibility into their delivery journey. The live map displays the delivery person's current location with a profile indicator and the customer's destination marked with a secure lock icon.</p>
-                <p class="kf-para">The timeline and live map work together as a comprehensive tracking system. The timeline shows what stage the order is in while the map shows where it is in real-time.</p>
+                <p class="kf-para">Beyond static status updates, we integrated real-time location tracking that gives users complete visibility into their delivery journey.</p>
+                <p class="kf-para">The live map displays the delivery person's current location with a profile indicator and the customer's destination marked with a secure lock icon.</p>
+                <p class="kf-para">The timeline and live map work together as a comprehensive tracking system, the timeline shows what stage the order is in, while the map shows where it is in real-time.</p>
               </div>
-            </div>
-            <div class="kf-block__mockup">
-              <img
-                src="kikku-project/kikku mockup order details.png"
-                alt="Tilted phone mockup showing live map tracking with delivery route across Abuja"
-                class="kf-mockup-img"
-                loading="lazy"
-              >
             </div>
           </div>
 
@@ -416,20 +491,114 @@
             <img src="about-assets/purple star.png" alt="" class="cs-star-img" aria-hidden="true">
             <h2 class="cs-section__title">Visual Designs</h2>
           </div>
+
+          <div class="vd-wrap">
+            <img
+              src="kikku-project/assets/woman holding phone.svg"
+              alt="Woman smiling while holding a phone and a delivery box"
+              class="vd-hero"
+              loading="lazy"
+            >
+            <img
+              src="kikku-project/assets/phone mockups.svg"
+              alt="Three phone screens: home feed, search results, and filter panel"
+              class="vd-mockups vd-mockups--left"
+              loading="lazy"
+            >
+            <img
+              src="kikku-project/assets/phone mockups-2.svg"
+              alt="Three phone screens: live map, order details timeline, and product detail"
+              class="vd-mockups"
+              loading="lazy"
+            >
+          </div>
         </section>
 
         <!-- ======================================================
-             SECTION 10 — REFLECTIONS  |  Star: purple
+             SECTION 10 — DESIGN OUTCOME  |  Star: blue
              ====================================================== -->
         <section id="reflections" class="cs-section">
           <div class="cs-section__header">
-            <img src="about-assets/purple star.png" alt="" class="cs-star-img" aria-hidden="true">
-            <h2 class="cs-section__title">Reflections</h2>
+            <img src="about-assets/blue star.png" alt="" class="cs-star-img" aria-hidden="true">
+            <h2 class="cs-section__title">Design Outcome</h2>
           </div>
+
+          <p class="do-intro">This redesign represents a major leap forward in Kikuu's evolution as a modern, customer-centric marketplace. there is a new shift from a discount-driven, high-volume marketplace to a more trusted, value-focused global brand. It's not just a new look but a new experience that better connects customers with the products they love.</p>
+
+          <div class="do-row">
+            <div class="do-card">
+              <p>The redesign led to a smoother shopping experience, improved product discovery, better customer experience and higher user satisfaction. Users found it easier to browse categories, compare prices, make confident purchase decisions and live track their deliveries.</p>
+              <p>Overall, engagement increased, and both shoppers and sellers reported a more seamless, enjoyable experience on the platform.</p>
+            </div>
+            <img
+              src="kikku-project/assets/Outdoor Mockup.svg"
+              alt="Outdoor billboard mockup showing Kikuu logo"
+              class="do-mockup"
+              loading="lazy"
+            >
+          </div>
+        </section>
+
+        <!-- ======================================================
+             SECTION 11 — IMPACT  |  Star: orange
+             ====================================================== -->
+        <section id="impact" class="cs-section">
+          <div class="cs-section__header">
+            <img src="about-assets/orange star.png" alt="" class="cs-star-img" aria-hidden="true">
+            <h2 class="cs-section__title">Impact</h2>
+          </div>
+
+          <!-- Staggered metric cards -->
+          <div class="impact-cards">
+            <img
+              src="kikku-project/assets/Impact 1.svg"
+              alt="Impact 1: 45% increase in delivery clarity — pickup confusion decreased through accurate location details, timeline transparency, and stage-specific notifications"
+              class="impact-card impact-card--left"
+              loading="lazy"
+            >
+            <img
+              src="kikku-project/assets/Impact 2.svg"
+              alt="Impact 2: 58% faster product discovery — users found products faster with improved filtering, clear categorisation, and voice search"
+              class="impact-card impact-card--right"
+              loading="lazy"
+            >
+            <img
+              src="kikku-project/assets/Impact 3.svg"
+              alt="Impact 3: 83% delivery tracking satisfaction — delivery issues dropped after introducing real-time map tracking and milestone updates"
+              class="impact-card impact-card--left"
+              loading="lazy"
+            >
+          </div>
+
+          <!-- Typography: SF Pro card left, type scale right -->
+          <div class="impact-typography">
+            <img
+              src="kikku-project/assets/Frame 1487627862.svg"
+              alt="SF Pro typeface specimen card showing alphabet and numerals"
+              class="impact-typography__card"
+              loading="lazy"
+            >
+            <div class="impact-typography__scale">
+              <div class="impact-type-row">
+                <p class="impact-type-row__specimen impact-type-row__specimen--heading">The quick brown fox jumps over the lazy dog</p>
+                <span class="impact-type-row__label">Heading 24px</span>
+              </div>
+              <div class="impact-type-row">
+                <p class="impact-type-row__specimen impact-type-row__specimen--subheading">The quick brown fox jumps over the lazy dog</p>
+                <span class="impact-type-row__label">Sub-heading 18px</span>
+              </div>
+              <div class="impact-type-row">
+                <p class="impact-type-row__specimen impact-type-row__specimen--body">The quick brown fox jumps over the lazy dog</p>
+                <span class="impact-type-row__label">Body 16px</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colour palette -->
           <img
-            src="kikku-project/Design overview.png"
-            alt="Reflections: design outcomes and impact on the Kikku platform"
-            class="cs-full-image"
+            src="kikku-project/assets/colors.svg"
+            alt="Colour palette: Orange #FE6213, Navy Blue #1A1C29, Gray #4A5565"
+            class="impact-colors"
             loading="lazy"
           >
         </section>
@@ -450,7 +619,9 @@
           <a href="#design-process"    class="sidebar__link">Design Process</a>
           <a href="#research-summary"  class="sidebar__link">Research Summary</a>
           <a href="#key-features"      class="sidebar__link">Key Features</a>
-          <a href="#reflections"       class="sidebar__link">Reflections</a>
+          <a href="#visual-designs"    class="sidebar__link">Visual Designs</a>
+          <a href="#reflections"       class="sidebar__link">Design Outcome</a>
+          <a href="#impact"            class="sidebar__link">Impact</a>
           <a href="#" class="sidebar__link" id="back-to-top-link">Back to Top</a>
         </nav>
       </aside>
@@ -462,88 +633,154 @@
 
 
   <!-- FOOTER — exact copy from index.html -->
-  <footer class="footer" aria-label="Site footer">
+  <footer class="site-footer" aria-label="Site footer">
 
-    <div class="footer__top">
-      <div class="footer__row1">
-        <img src="icons/sea shells.png" alt="" class="footer__shell-icon">
-        <span class="footer__label">LAGOS</span>
-        <span class="footer__time" id="lagos-time" aria-live="polite" aria-label="Current time in Lagos, Nigeria"></span>
+    <!-- Wave at the very top edge of the footer — sits on top of blue water bg -->
+    <img src="portfolio-design-images/footer illustrations/waves.png"
+         alt="" aria-hidden="true" loading="lazy"
+         class="site-footer__wave">
+
+    <!-- INFO BAND — sits on blue water below the wave -->
+    <div class="footer-band">
+
+      <!-- Left: clock + message -->
+      <div class="footer-band__left">
+        <p class="footer-band__clock">🏆 LAGOS <span id="lagos-time" aria-live="polite" aria-label="Current time in Lagos">9:00AM</span></p>
+        <p class="footer-band__message">If you have any cool ideas, questions. Feel free to reach out to me for a chat. 💜</p>
       </div>
-      <div class="footer__row2">
-        <div class="footer__message">
-          <p>If you have any cool ideas, questions. Feel free to reach out to me for a chat.&#x1F49C;</p>
-        </div>
-        <nav class="footer__nav" aria-label="Footer navigation">
-          <a href="index.html">Works</a>
-          <a href="about.html">About</a>
-          <a href="#">Resume</a>
-        </nav>
-        <div class="footer__socials">
-          <a href="mailto:omotoyosi2sure@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Send email to Toyo (opens in new tab)">
-            <img src="icons/Gmail.png" alt="">
-          </a>
-          <a href="https://linkedin.com/in/omotoyosi-bamigboye" target="_blank" rel="noopener noreferrer" aria-label="Visit Toyo on LinkedIn (opens in new tab)">
-            <img src="icons/Linkedin.png" alt="">
-          </a>
-          <a href="https://behance.net/omotoyobamigbo" target="_blank" rel="noopener noreferrer" aria-label="Visit Toyo on Behance (opens in new tab)">
-            <img src="icons/Behance.png" alt="">
-          </a>
-          <a href="https://tiktok.com/@toyoscreativespace" target="_blank" rel="noopener noreferrer" aria-label="Visit Toyo on TikTok (opens in new tab)">
-            <img src="icons/Tiktok.png" alt="">
-          </a>
-          <a href="https://instagram.com/toyoscreativespace" target="_blank" rel="noopener noreferrer" aria-label="Visit Toyo on Instagram (opens in new tab)">
-            <img src="icons/Instagram.png" alt="">
-          </a>
-        </div>
+
+      <!-- Middle: nav links -->
+      <nav class="footer-band__nav" aria-label="Footer navigation">
+        <a href="index.html" class="footer-band__nav-link">Works</a>
+        <a href="about.html" class="footer-band__nav-link">About</a>
+        <a href="#" class="footer-band__nav-link">Resume</a>
+      </nav>
+
+      <!-- Right: social icon circles -->
+      <div class="footer-band__socials">
+        <a href="mailto:toyobammy@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Toyo" class="footer-band__social-btn">
+          <img src="icons/Gmail.png" alt="Gmail" loading="lazy">
+        </a>
+        <a href="https://linkedin.com/in/omotoyosi-bamigboye" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-band__social-btn">
+          <img src="icons/Linkedin.png" alt="LinkedIn" loading="lazy">
+        </a>
+        <a href="https://behance.net/omotoyobamigbo" target="_blank" rel="noopener noreferrer" aria-label="Behance" class="footer-band__social-btn">
+          <img src="icons/Behance.png" alt="Behance" loading="lazy">
+        </a>
+        <a href="https://tiktok.com/@toyoscreativespace" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="footer-band__social-btn">
+          <img src="icons/Tiktok.png" alt="TikTok" loading="lazy">
+        </a>
+        <a href="https://instagram.com/toyoscreativespace" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-band__social-btn">
+          <img src="icons/Instagram.png" alt="Instagram" loading="lazy">
+        </a>
       </div>
+
     </div>
 
-    <div class="underwater">
-      <img src="portfolio-design-images/footer illustrations/blue sea water.png" alt="" class="underwater__water-bg">
-      <img src="portfolio-design-images/footer illustrations/waves.png" alt="" class="underwater__wave underwater__wave--1">
-      <img src="portfolio-design-images/footer illustrations/waves.png" alt="" class="underwater__wave underwater__wave--2">
-      <img src="portfolio-design-images/footer illustrations/waves.png" alt="" class="underwater__wave underwater__wave--3">
-      <img src="portfolio-design-images/footer illustrations/sand.png" alt="" class="underwater__sand">
-      <img src="portfolio-design-images/footer illustrations/green-coral.png" alt="" class="underwater__seaweed-green">
-      <img src="portfolio-design-images/footer illustrations/dark green seaweed.png" alt="" class="underwater__seaweed-dark">
-      <img src="portfolio-design-images/footer illustrations/yellow coral.png" alt="" class="underwater__coral-yellow">
-      <img src="portfolio-design-images/footer illustrations/orange coral.png" alt="" class="underwater__coral-orange">
-      <img src="portfolio-design-images/footer illustrations/dark green seaweed.png" alt="" class="underwater__seaweed-right">
-      <img src="portfolio-design-images/footer illustrations/purple tube coral.png" alt="" class="underwater__coral-purple">
-      <img src="portfolio-design-images/footer illustrations/pink mushrooms.png" alt="" class="underwater__mushroom-pink">
-      <img src="portfolio-design-images/footer illustrations/purple mushrooms.png" alt="" class="underwater__mushroom-purple">
-      <div class="underwater__fish-orange-wrapper">
-        <img src="portfolio-design-images/footer illustrations/yellow fish.png" alt="Fish saying Say Hi" class="underwater__fish-orange">
-        <span class="underwater__fish-text-orange">Say "Hi"</span>
+    <!-- PART 2: UNDERWATER SCENE -->
+    <div class="footer-sea" aria-label="Underwater illustration">
+
+      <!-- Sand floor -->
+      <div class="footer-sea__sand" aria-hidden="true"></div>
+
+      <!-- 1. Green coral (far left) -->
+      <img src="portfolio-design-images/footer illustrations/green-coral.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="left:40px;bottom:80px;height:220px;">
+
+      <!-- 2. Dark green seaweed (second from left) -->
+      <img src="portfolio-design-images/footer illustrations/dark green seaweed.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="left:180px;bottom:80px;height:260px;">
+
+      <!-- 3. Yellow fish "Say Hi" (left, swimming) -->
+      <div class="footer-sea__fish-wrap" style="left:160px;bottom:240px;" aria-hidden="true">
+        <img src="portfolio-design-images/footer illustrations/yellow fish.png" alt="" loading="lazy" class="footer-sea__fish-img">
+        <span class="footer-sea__fish-text">Say "Hi"</span>
       </div>
-      <div class="underwater__fish-green-wrapper">
-        <img src="portfolio-design-images/footer illustrations/green fish.png" alt="Fish saying Let's work" class="underwater__fish-green">
-        <span class="underwater__fish-text-green">Let's work</span>
+
+      <!-- 4. Pink mushroom coral (center-left) -->
+      <img src="portfolio-design-images/footer illustrations/pink mushrooms.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="left:380px;bottom:80px;height:160px;">
+
+      <!-- 5. Pink starfish -->
+      <img src="portfolio-design-images/footer illustrations/pink-star.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="left:300px;bottom:90px;height:50px;">
+
+      <!-- 6. Orange starfish -->
+      <img src="portfolio-design-images/footer illustrations/orange star.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="left:440px;bottom:85px;height:45px;">
+
+      <!-- 7. Purple tube coral (center) -->
+      <img src="portfolio-design-images/footer illustrations/purple tube coral.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="left:520px;bottom:80px;height:180px;">
+
+      <!-- 8a. Rocks (center) -->
+      <img src="portfolio-design-images/footer illustrations/rocks.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="left:470px;bottom:80px;height:50px;">
+
+      <!-- 8b. Rocks (right of center) -->
+      <img src="portfolio-design-images/footer illustrations/rocks.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="left:720px;bottom:80px;height:50px;">
+
+      <!-- 9. Pink shell -->
+      <img src="portfolio-design-images/footer illustrations/pink-shell.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="left:660px;bottom:85px;height:45px;">
+
+      <!-- 10. Yellow coral tree (right side, large) -->
+      <img src="portfolio-design-images/footer illustrations/yellow coral.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="right:340px;bottom:80px;height:240px;">
+
+      <!-- 11. Orange coral tree (right side, smaller) -->
+      <img src="portfolio-design-images/footer illustrations/orange coral.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="right:260px;bottom:80px;height:200px;">
+
+      <!-- 12. Dark green seaweed (far right) -->
+      <img src="portfolio-design-images/footer illustrations/dark green seaweed.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="right:40px;bottom:80px;height:260px;">
+
+      <!-- 13. Green fish "Let's work" (right, swimming) -->
+      <div class="footer-sea__fish-wrap footer-sea__fish-wrap--right" style="right:180px;bottom:260px;" aria-hidden="true">
+        <img src="portfolio-design-images/footer illustrations/green fish.png" alt="" loading="lazy" class="footer-sea__fish-img footer-sea__fish-img--flip">
+        <span class="footer-sea__fish-text">Let's work</span>
       </div>
-      <img src="portfolio-design-images/footer illustrations/pink-star.png" alt="" class="underwater__star-pink">
-      <img src="portfolio-design-images/footer illustrations/orange star.png" alt="" class="underwater__star-orange">
-      <img src="portfolio-design-images/footer illustrations/orange shells.png" alt="" class="underwater__shell-orange">
-      <img src="portfolio-design-images/footer illustrations/pink-shell.png" alt="" class="underwater__shell-pink">
-      <img src="portfolio-design-images/footer illustrations/yellow shells.png" alt="" class="underwater__shell-yellow">
-      <img src="portfolio-design-images/footer illustrations/rocks.png" alt="" class="underwater__rocks">
-      <img src="portfolio-design-images/footer illustrations/bubbles.png" alt="" class="underwater__bubble" style="width:52px;left:24px;top:362px;">
-      <img src="portfolio-design-images/footer illustrations/bubbles.png" alt="" class="underwater__bubble" style="width:45px;left:272px;top:416px;">
-      <img src="portfolio-design-images/footer illustrations/bubbles (1).png" alt="" class="underwater__bubble" style="width:21px;left:372px;top:650px;">
-      <img src="portfolio-design-images/footer illustrations/bubbles.png" alt="" class="underwater__bubble" style="width:52px;left:616px;top:751px;">
-      <img src="portfolio-design-images/footer illustrations/bubbles (1).png" alt="" class="underwater__bubble" style="width:45px;left:772px;top:442px;">
-      <img src="portfolio-design-images/footer illustrations/bubbles.png" alt="" class="underwater__bubble" style="width:52px;left:857px;top:695px;">
-      <img src="portfolio-design-images/footer illustrations/bubbles (1).png" alt="" class="underwater__bubble" style="width:45px;left:1029px;top:410px;">
-      <img src="portfolio-design-images/footer illustrations/bubbles.png" alt="" class="underwater__bubble" style="width:21px;left:1141px;top:784px;">
-      <img src="portfolio-design-images/footer illustrations/bubbles (1).png" alt="" class="underwater__bubble" style="width:52px;left:1271px;top:484px;">
-      <img src="portfolio-design-images/teeny in floater.png" alt="Teeny relaxing in pool float" class="underwater__teeny">
-      <a href="#" class="underwater__back-to-land" onclick="scrollToTop();return false;" role="button" aria-label="Scroll back to top">
-        <img src="portfolio-design-images/footer illustrations/back to land rock.png" alt="Back to land">
-      </a>
-      <div class="underwater__bottom-bar">
-        <span>&copy; 2026, Toyo's Creative Space</span>
-        <span>Made with love, loads of coffee and viju choco. &#x1F49C;&#x1F36B;</span>
+
+      <!-- 14. Purple mushroom (far right) -->
+      <img src="portfolio-design-images/footer illustrations/purple mushrooms.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="right:60px;bottom:80px;height:140px;">
+
+      <!-- 15. Yellow shell (far right) -->
+      <img src="portfolio-design-images/footer illustrations/yellow shells.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="right:120px;bottom:85px;height:40px;">
+
+      <!-- 16. Purple starfish (far right) -->
+      <img src="portfolio-design-images/footer illustrations/purple star.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el" style="right:200px;bottom:85px;height:50px;">
+
+      <!-- 17. Teeny in floater (floating on water surface, top right) -->
+      <img src="portfolio-design-images/teeny in floater.png"
+           alt="Teeny the duck relaxing in a pink pool float on the water surface"
+           class="footer-sea__teeny" loading="lazy">
+
+      <!-- 18. CSS bubbles — 12 scattered across the water -->
+      <div class="footer-sea__bubble" style="width:32px;height:32px;left:8%;top:18%;" aria-hidden="true"></div>
+      <div class="footer-sea__bubble" style="width:20px;height:20px;left:16%;top:38%;" aria-hidden="true"></div>
+      <div class="footer-sea__bubble" style="width:48px;height:48px;left:24%;top:12%;" aria-hidden="true"></div>
+      <div class="footer-sea__bubble" style="width:24px;height:24px;left:33%;top:45%;" aria-hidden="true"></div>
+      <div class="footer-sea__bubble" style="width:36px;height:36px;left:43%;top:20%;" aria-hidden="true"></div>
+      <div class="footer-sea__bubble" style="width:20px;height:20px;left:51%;top:55%;" aria-hidden="true"></div>
+      <div class="footer-sea__bubble" style="width:52px;height:52px;left:59%;top:14%;" aria-hidden="true"></div>
+      <div class="footer-sea__bubble" style="width:28px;height:28px;left:67%;top:40%;" aria-hidden="true"></div>
+      <div class="footer-sea__bubble" style="width:40px;height:40px;left:75%;top:24%;" aria-hidden="true"></div>
+      <div class="footer-sea__bubble" style="width:22px;height:22px;left:82%;top:48%;" aria-hidden="true"></div>
+      <div class="footer-sea__bubble" style="width:30px;height:30px;left:90%;top:30%;" aria-hidden="true"></div>
+      <div class="footer-sea__bubble" style="width:18px;height:18px;left:96%;top:56%;" aria-hidden="true"></div>
+
+      <!-- Bottom bar -->
+      <div class="footer-sea__bar">
+        <button class="footer-sea__back-btn" onclick="scrollToTop()" aria-label="Scroll back to top of page">Back to land</button>
+        <span class="footer-sea__copyright">&copy; 2026, Toyo's Creative Space</span>
+        <span class="footer-sea__tagline">Made with love, loads of coffee and viju choco. 💜🍫</span>
       </div>
+
     </div>
 
   </footer>
