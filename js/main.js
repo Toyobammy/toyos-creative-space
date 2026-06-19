@@ -79,4 +79,41 @@ document.addEventListener('DOMContentLoaded', function () {
       link.addEventListener('click', closeMobileMenu);
     });
   }
+
+  // Footer underwater animations
+  (function initFooterAnimations() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var sea = document.querySelector('.footer-sea');
+    if (!sea) return;
+
+    // Bubbles: stagger with negative delays so they start mid-cycle on load
+    var bubbles = sea.querySelectorAll('.footer-sea__bubble');
+    bubbles.forEach(function(bubble, i) {
+      var duration  = 8 + ((i * 13 + 5) % 10) * 0.6;
+      var baseDelay = (i / bubbles.length) * 20;
+      var jitter    = ((i * 7 + 3) % 5) * 0.7;
+      bubble.style.animationName           = 'bubble-rise';
+      bubble.style.animationDuration       = duration.toFixed(1) + 's';
+      bubble.style.animationDelay          = '-' + (baseDelay + jitter).toFixed(1) + 's';
+      bubble.style.animationTimingFunction = 'ease-in-out';
+      bubble.style.animationIterationCount = 'infinite';
+      bubble.style.willChange              = 'transform, opacity';
+    });
+
+    // Seaweed + tall branch corals sway from their base
+    var swayEls = sea.querySelectorAll(
+      '.footer-sea__el[src*="seaweed"], ' +
+      '.footer-sea__el[src*="green-coral"], ' +
+      '.footer-sea__el[src*="yellow coral"], ' +
+      '.footer-sea__el[src*="orange coral"]'
+    );
+    swayEls.forEach(function(el, i) {
+      var duration = (5 + ((i * 11 + 2) % 20) * 0.1).toFixed(1) + 's';
+      var delay    = (i * 1.3).toFixed(1) + 's';
+      el.classList.add('footer-sea__el--sway');
+      el.style.animationDuration = duration;
+      el.style.animationDelay    = delay;
+    });
+  })();
 });
