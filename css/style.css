@@ -1284,8 +1284,8 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 28px;
-  font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-display);
+  font-weight: 400;
   font-size: 22px;
   color: var(--color-text-primary);
 }
