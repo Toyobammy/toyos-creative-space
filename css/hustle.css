@@ -4,6 +4,14 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
+   RESEARCH SUMMARY — override shared intro text size/color for this page
+   -------------------------------------------------------------------------- */
+.cs-intro-text {
+  font-size: 28px;
+  color: #4B5563;
+}
+
+/* --------------------------------------------------------------------------
    SOLUTIONS — image LEFT (35%), text + numbered points RIGHT (65%). No card.
    -------------------------------------------------------------------------- */
 .sol-columns {
@@ -44,7 +52,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin: 16px 0 0;
+  margin: 60px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -93,6 +101,13 @@
    -------------------------------------------------------------------------- */
 .cs-highlights__frame + .cs-highlights__frame {
   margin-top: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   KEY FEATURES — header sits 60px above the mockup frame
+   -------------------------------------------------------------------------- */
+#key-features .cs-section__header {
+  margin-bottom: 60px;
 }
 
 /* --------------------------------------------------------------------------
@@ -184,7 +199,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   USER PERSONAS — dark meta/photo column + light summary/frustrations/needs cards
+   USER PERSONAS — meta/photo card + summary/frustrations/needs cards
    -------------------------------------------------------------------------- */
 .hp-personas-stack {
   display: flex;
@@ -194,98 +209,117 @@
 
 .hp-persona {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "meta summary summary"
-    "photo frustrations needs";
-  gap: 16px;
-  background: #1A1A1A;
-  border-radius: 24px;
-  padding: 24px;
+  grid-template-columns: 427fr 783fr;
+  gap: 50px;
 }
 
 .hp-persona--reversed {
-  grid-template-areas:
-    "summary summary meta"
-    "frustrations needs photo";
+  grid-template-columns: 783fr 427fr;
+}
+
+.hp-persona--reversed .hp-persona__right {
+  order: -1;
+}
+
+.hp-persona__left {
+  display: flex;
+  flex-direction: column;
+  background: #F5F5F5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hp-persona__right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .hp-persona__meta {
-  grid-area: meta;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 6px;
-  padding: 8px 4px;
+  padding: 24px 24px 16px;
 }
 
 .hp-persona__meet {
   font-family: 'Urbanist', sans-serif;
-  font-size: 16px;
+  font-size: 32px;
   font-weight: 500;
-  color: #C7C7C7;
+  color: var(--color-text-secondary);
   margin: 0;
 }
 
 .hp-persona__name {
   font-family: 'Urbanist', sans-serif;
-  font-size: 22px;
+  font-size: 32px;
   font-weight: 700;
-  color: var(--color-primary-light);
+  color: var(--color-primary);
   margin: 0;
 }
 
 .hp-persona__detail {
   font-family: 'Urbanist', sans-serif;
-  font-size: 14px;
   font-weight: 400;
-  color: #C7C7C7;
+  color: var(--color-text-secondary);
   margin: 0;
 }
 
+/* age/role line (2nd <p> in .hp-persona__meta, after "Meet") */
+.hp-persona__detail:nth-of-type(2) {
+  font-size: 24px;
+}
+
+/* income line (3rd <p> in .hp-persona__meta) */
+.hp-persona__detail:nth-of-type(3) {
+  font-size: 20px;
+}
+
 .hp-persona__photo {
-  grid-area: photo;
   width: 100%;
-  height: 100%;
+  flex: 1;
   min-height: 220px;
   object-fit: cover;
   object-position: top center;
-  border-radius: 16px;
   display: block;
 }
 
 .hp-persona__summary {
-  grid-area: summary;
-  background: #FAFAFA;
-  border-radius: 16px;
+  background: #F7F7F7;
+  border-radius: 20px;
   padding: 24px;
 }
 
 .hp-persona__summary p {
   font-family: 'Urbanist', sans-serif;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 400;
-  color: #3C3C3C;
+  color: #4B5563;
   line-height: 1.6;
   margin: 0;
 }
 
+.hp-persona__panels {
+  display: flex;
+  gap: 32px;
+}
+
 .hp-persona__panel {
-  background: #FAFAFA;
-  border-radius: 16px;
+  flex: 1;
+  background: #F5F5F5;
+  border-radius: 20px;
   padding: 24px;
 }
 
-.hp-persona__panel--frustrations {
-  grid-area: frustrations;
-}
-
-.hp-persona__panel--needs {
-  grid-area: needs;
+.hp-persona__panel .hp-persona__panel-title {
+  text-align: center;
 }
 
 .hp-persona__panel-title {
   font-family: 'Urbanist', sans-serif;
-  font-size: 18px;
+  font-size: 32px;
   font-weight: 600;
   color: #1C1C1C;
   margin: 0 0 12px;
@@ -301,9 +335,9 @@
 
 .hp-persona__list li {
   font-family: 'Urbanist', sans-serif;
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 400;
-  color: #3C3C3C;
+  color: #4B5563;
   line-height: 1.5;
 }
 
@@ -316,12 +350,14 @@
   .hp-persona,
   .hp-persona--reversed {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "meta"
-      "photo"
-      "summary"
-      "frustrations"
-      "needs";
+  }
+
+  .hp-persona--reversed .hp-persona__right {
+    order: 0;
+  }
+
+  .hp-persona__panels {
+    flex-direction: column;
   }
 
   .hp-persona__photo {

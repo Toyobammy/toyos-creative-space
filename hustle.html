@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/kikku.css">
   <link rel="stylesheet" href="css/hustle.css">
+  <link rel="stylesheet" href="css/index-mobile-menu.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -18,25 +19,36 @@
 
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-    <div class="mobile-menu__header">
-      <a href="index.html" class="mobile-menu__logo">
-        <img src="portfolio-design-images/tcs-logo.png" alt="Toyo's Creative Space home">
-      </a>
-      <button class="mobile-menu__close" aria-label="Close navigation menu">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M16 2L2 16M2 2L16 16" stroke="#292929" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-    </div>
     <nav class="mobile-menu__nav">
-      <a href="index.html#projects" class="mobile-menu__link">Works</a>
+      <a href="index.html" class="mobile-menu__link">Home</a>
       <a href="about.html" class="mobile-menu__link">About</a>
+      <a href="index.html#projects" class="mobile-menu__link">Work</a>
       <a href="https://drive.google.com/file/d/1CQYjmtOOulWqzke0gi_U4UttHId4qYxD/view?usp=drive_link" class="mobile-menu__link" target="_blank" rel="noopener noreferrer">Resume</a>
     </nav>
-    <div class="mobile-menu__actions">
-      <a href="https://cal.com/toyoscreativespace/project-discovery-call" class="mobile-menu__btn" target="_blank" rel="noopener noreferrer" aria-label="Book a call (opens in new tab)">&#128197; Book a Call &rarr;</a>
+    <a href="https://cal.com/toyoscreativespace/project-discovery-call" class="mobile-menu__btn" target="_blank" rel="noopener noreferrer" aria-label="Book a call (opens in new tab)">Book a Call</a>
+    <div class="mobile-menu__illustration" aria-hidden="true">
+      <img src="about-assets/teeny at work.png" alt="">
+    </div>
+    <div class="mobile-menu__contact">
+      <p class="mobile-menu__contact-label">Contact</p>
+      <div class="mobile-menu__contact-row">
+        <a href="mailto:toyoscreativespace@gmail.com" class="mobile-menu__contact-email">toyoscreativespace@gmail.com</a>
+        <button class="mobile-menu__copy-btn" aria-label="Copy email address" data-copy="toyoscreativespace@gmail.com">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="9" y="9" width="13" height="13" rx="2" stroke="#292929" stroke-width="1.5"/>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="#292929" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </div>
+      <p class="mobile-menu__globe"><img src="mobile menu/globe.svg" alt="" class="mobile-menu__globe-icon">Works round the Globe</p>
     </div>
   </div>
+
+  <!-- Mobile Menu Toggle (mobile only) -->
+  <button class="nav__hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+    <img src="mobile menu/menu.svg" alt="" class="nav__hamburger-icon">
+    <img src="mobile menu/cancel menu.png" alt="" class="nav__hamburger-close">
+  </button>
 
   <!-- Navigation — exact copy from index.html; Works link gets active state -->
   <header>
@@ -51,11 +63,6 @@
       </div>
       <div class="nav__actions">
         <a href="https://cal.com/toyoscreativespace/project-discovery-call" class="nav__btn" target="_blank" rel="noopener noreferrer" aria-label="Book a call (opens in new tab)">Book a Call</a>
-        <button class="nav__hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
-          <span class="nav__hamburger-line"></span>
-          <span class="nav__hamburger-line"></span>
-          <span class="nav__hamburger-line"></span>
-        </button>
       </div>
     </nav>
   </header>
@@ -214,27 +221,27 @@
                 <p>Hustle was created as a flexible side gig platform designed for the Nigerian audience that are looking to earn extra income through artisan work, short term jobs and weekend opportunities.</p>
                 <p>The platform creates an easy and reliable way for people to monetize their free time and also creates more jobs for people in the country.</p>
               </div>
-
-              <ol class="sol-num-list">
-                <li class="sol-num-list__item">
-                  <span class="sol-num-list__num">1</span>
-                  <p class="sol-num-list__text">Create a reliable platform for flexible side gigs and artisan jobs</p>
-                </li>
-                <li class="sol-num-list__item">
-                  <span class="sol-num-list__num">2</span>
-                  <p class="sol-num-list__text">Make earning extra income more accessible for low-income earners and young adults</p>
-                </li>
-                <li class="sol-num-list__item">
-                  <span class="sol-num-list__num">3</span>
-                  <p class="sol-num-list__text">Simplify the process of finding trusted local help</p>
-                </li>
-                <li class="sol-num-list__item">
-                  <span class="sol-num-list__num">4</span>
-                  <p class="sol-num-list__text">Connect people with a simpler and more relatable alternative to foreign freelancing platforms</p>
-                </li>
-              </ol>
             </div>
           </div>
+
+          <ol class="sol-num-list">
+            <li class="sol-num-list__item">
+              <span class="sol-num-list__num">1</span>
+              <p class="sol-num-list__text">Create a reliable platform for flexible side gigs and artisan jobs</p>
+            </li>
+            <li class="sol-num-list__item">
+              <span class="sol-num-list__num">2</span>
+              <p class="sol-num-list__text">Make earning extra income more accessible for low-income earners and young adults</p>
+            </li>
+            <li class="sol-num-list__item">
+              <span class="sol-num-list__num">3</span>
+              <p class="sol-num-list__text">Simplify the process of finding trusted local help</p>
+            </li>
+            <li class="sol-num-list__item">
+              <span class="sol-num-list__num">4</span>
+              <p class="sol-num-list__text">Connect people with a simpler and more relatable alternative to foreign freelancing platforms</p>
+            </li>
+          </ol>
         </section>
 
         <!-- ======================================================
@@ -273,77 +280,105 @@
 
             <!-- Persona 1: Fifehan — meta+photo LEFT, summary/panels RIGHT -->
             <div class="hp-persona">
-              <div class="hp-persona__meta">
-                <p class="hp-persona__meet">Meet</p>
-                <h3 class="hp-persona__name">Fifehan Chukwuma</h3>
-                <p class="hp-persona__detail">22yrs &bull; 300 level college student</p>
-                <p class="hp-persona__detail">Allowance 20,000 naira bi-weekly</p>
+              <div class="hp-persona__left">
+                <div class="hp-persona__meta">
+                  <p class="hp-persona__meet">Meet</p>
+                  <h3 class="hp-persona__name">Fifehan Chukwuma</h3>
+                  <p class="hp-persona__detail">22yrs &bull; 300 level college student</p>
+                  <p class="hp-persona__detail">Allowance 20,000 naira bi-weekly</p>
+                </div>
+                <img
+                  src="hustle-project/assets in section one/fifehan-photo.png"
+                  alt="Fifehan Chukwuma, a 22 year old college student"
+                  class="hp-persona__photo"
+                  loading="lazy"
+                >
               </div>
-              <img
-                src="hustle-project/assets in section one/fifehan-photo.png"
-                alt="Fifehan Chukwuma, a 22 year old college student"
-                class="hp-persona__photo"
-                loading="lazy"
-              >
-              <div class="hp-persona__summary">
-                <h4 class="hp-persona__panel-title">Summary</h4>
-                <p>Fifehan is a driven university student struggling to make ends meet with irregular financial support from her parents. She's eager to find flexible work opportunities that won't interfere with her studies while building relevant experience for her future career. Despite her vocational skills, she's been burned by fraudulent job posts online and is now extremely cautious about online opportunities.</p>
-              </div>
-              <div class="hp-persona__panel hp-persona__panel--frustrations">
-                <h4 class="hp-persona__panel-title">Frustrations</h4>
-                <ul class="hp-persona__list">
-                  <li><strong>Scam Anxiety:</strong> She has been a victim of a scam online where she provided services for a client and did not get paid.</li>
-                  <li><strong>Limited Capital:</strong> She cannot afford to pay the upfront fees that many platforms demand.</li>
-                  <li><strong>Lack of verification:</strong> She can't distinguish legitimate opportunities from fraudulent ones</li>
-                </ul>
-              </div>
-              <div class="hp-persona__panel hp-persona__panel--needs">
-                <h4 class="hp-persona__panel-title">Needs</h4>
-                <ul class="hp-persona__list">
-                  <li><strong>Trust Indicators:</strong> Clear verification systems, user reviews, and platform credibility.</li>
-                  <li><strong>Low Barrier to Entry:</strong> Opportunities that don't require upfront payments or extensive experience.</li>
-                  <li><strong>Flexible Scheduling:</strong> Work opportunities that can accommodate her academic calendar.</li>
-                </ul>
+              <div class="hp-persona__right">
+                <div class="hp-persona__summary">
+                  <h4 class="hp-persona__panel-title">Summary</h4>
+                  <p>Fifehan is a driven university student struggling to make ends meet with irregular financial support from her parents. She's eager to find flexible work opportunities that won't interfere with her studies while building relevant experience for her future career. Despite her vocational skills, she's been burned by fraudulent job posts online and is now extremely cautious about online opportunities.</p>
+                </div>
+                <div class="hp-persona__panels">
+                  <div class="hp-persona__panel hp-persona__panel--frustrations">
+                    <h4 class="hp-persona__panel-title">Frustrations</h4>
+                    <ul class="hp-persona__list">
+                      <li><strong>Scam Anxiety:</strong> She has been a victim of a scam online where she provided services for a client and did not get paid.</li>
+                      <li><strong>Limited Capital:</strong> She cannot afford to pay the upfront fees that many platforms demand.</li>
+                      <li><strong>Lack of verification:</strong> She can't distinguish legitimate opportunities from fraudulent ones</li>
+                    </ul>
+                  </div>
+                  <div class="hp-persona__panel hp-persona__panel--needs">
+                    <h4 class="hp-persona__panel-title">Needs</h4>
+                    <ul class="hp-persona__list">
+                      <li><strong>Trust Indicators:</strong> Clear verification systems, user reviews, and platform credibility.</li>
+                      <li><strong>Low Barrier to Entry:</strong> Opportunities that don't require upfront payments or extensive experience.</li>
+                      <li><strong>Flexible Scheduling:</strong> Work opportunities that can accommodate her academic calendar.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
 
             <!-- Persona 2: Josiah — summary/panels LEFT, meta+photo RIGHT -->
             <div class="hp-persona hp-persona--reversed">
-              <div class="hp-persona__summary">
-                <h4 class="hp-persona__panel-title">Summary</h4>
-                <p>Josiah's salary barely covers his family's growing expenses, especially with inflation and his child's education costs. He's looking for legitimate side hustles he can do during the weekends to supplement his income. His previous experiences with untrustworthy job platforms have made him skeptical, but financial pressure keeps pushing him to search for additional income sources.</p>
+              <div class="hp-persona__right">
+                <div class="hp-persona__summary">
+                  <h4 class="hp-persona__panel-title">Summary</h4>
+                  <p>Josiah's salary barely covers his family's growing expenses, especially with inflation and his child's education costs. He's looking for legitimate side hustles he can do during the weekends to supplement his income. His previous experiences with untrustworthy job platforms have made him skeptical, but financial pressure keeps pushing him to search for additional income sources.</p>
+                </div>
+                <div class="hp-persona__panels">
+                  <div class="hp-persona__panel hp-persona__panel--frustrations">
+                    <h4 class="hp-persona__panel-title">Frustrations</h4>
+                    <ul class="hp-persona__list">
+                      <li><strong>Financial Pressure:</strong> Rising living costs and family responsibilities create urgent need for extra income</li>
+                      <li><strong>Skill Underutilization:</strong> Can't find platforms that properly value his accounting and analytical skills</li>
+                      <li><strong>Lack of Transparency:</strong> Unclear job descriptions and hidden terms that change after starting work</li>
+                    </ul>
+                  </div>
+                  <div class="hp-persona__panel hp-persona__panel--needs">
+                    <h4 class="hp-persona__panel-title">Needs</h4>
+                    <ul class="hp-persona__list">
+                      <li><strong>Income Reliability:</strong> Consistent opportunities that provide predictable supplementary income</li>
+                      <li><strong>Time Efficiency:</strong> High-value tasks that maximize earning potential within his limited available hours</li>
+                      <li><strong>Transparent Operations:</strong> Clear communication about job requirements, timelines, and payment terms</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="hp-persona__meta">
-                <p class="hp-persona__meet">Meet</p>
-                <h3 class="hp-persona__name">Josiah Badru</h3>
-                <p class="hp-persona__detail">31yrs &bull; Mid-level Accountant</p>
-                <p class="hp-persona__detail">Earns 80,000 naira p/m</p>
+              <div class="hp-persona__left">
+                <div class="hp-persona__meta">
+                  <p class="hp-persona__meet">Meet</p>
+                  <h3 class="hp-persona__name">Josiah Badru</h3>
+                  <p class="hp-persona__detail">31yrs &bull; Mid-level Accountant</p>
+                  <p class="hp-persona__detail">Earns 80,000 naira p/m</p>
+                </div>
+                <img
+                  src="hustle-project/assets in section one/josiah-photo.png"
+                  alt="Josiah Badru, a 31 year old mid-level accountant"
+                  class="hp-persona__photo"
+                  loading="lazy"
+                >
               </div>
-              <div class="hp-persona__panel hp-persona__panel--frustrations">
-                <h4 class="hp-persona__panel-title">Frustrations</h4>
-                <ul class="hp-persona__list">
-                  <li><strong>Financial Pressure:</strong> Rising living costs and family responsibilities create urgent need for extra income</li>
-                  <li><strong>Skill Underutilization:</strong> Can't find platforms that properly value his accounting and analytical skills</li>
-                  <li><strong>Lack of Transparency:</strong> Unclear job descriptions and hidden terms that change after starting work</li>
-                </ul>
-              </div>
-              <div class="hp-persona__panel hp-persona__panel--needs">
-                <h4 class="hp-persona__panel-title">Needs</h4>
-                <ul class="hp-persona__list">
-                  <li><strong>Income Reliability:</strong> Consistent opportunities that provide predictable supplementary income</li>
-                  <li><strong>Time Efficiency:</strong> High-value tasks that maximize earning potential within his limited available hours</li>
-                  <li><strong>Transparent Operations:</strong> Clear communication about job requirements, timelines, and payment terms</li>
-                </ul>
-              </div>
-              <img
-                src="hustle-project/assets in section one/josiah-photo.png"
-                alt="Josiah Badru, a 31 year old mid-level accountant"
-                class="hp-persona__photo"
-                loading="lazy"
-              >
             </div>
 
           </div>
+        </section>
+
+        <!-- ======================================================
+             SECTION 7 — KEY FEATURES  |  Star: green
+             ====================================================== -->
+        <section id="key-features" class="cs-section">
+          <div class="cs-section__header">
+            <img src="kikku-project/green star.png" alt="" class="cs-star-img" aria-hidden="true">
+            <h2 class="cs-section__title">Key Features</h2>
+          </div>
+          <img
+            src="hustle-project/assets in section one/key feature one.png"
+            alt="Hustle app key features — hustler screen mockups"
+            class="cs-full-image"
+            loading="lazy"
+          >
         </section>
 
       </div>
@@ -353,18 +388,7 @@
       <!-- ── RIGHT: STICKY SIDEBAR ─────────────────────────────── -->
       <aside class="sidebar" aria-label="Case study table of contents">
         <p class="sidebar__label">Contents</p>
-        <nav class="sidebar__nav">
-          <a href="#overview"          class="sidebar__link">Overview</a>
-          <a href="#highlights"        class="sidebar__link">Highlights</a>
-          <a href="#challenges"        class="sidebar__link">The Challenge</a>
-          <a href="#solutions"         class="sidebar__link">Solution</a>
-          <a href="#research-summary"  class="sidebar__link">Research Summary</a>
-          <a href="#user-personas"     class="sidebar__link">User Personas</a>
-          <a href="#key-features"      class="sidebar__link">Key Features</a>
-          <a href="#visual-designs"    class="sidebar__link">Visual Designs</a>
-          <a href="#reflections"       class="sidebar__link">Reflections</a>
-          <a href="#" class="sidebar__link" id="back-to-top-link">Back to Top</a>
-        </nav>
+        <nav class="sidebar__nav"></nav>
       </aside>
 
     </div>

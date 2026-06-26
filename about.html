@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/index-mobile-menu.css">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -18,22 +19,13 @@
 
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-    <div class="mobile-menu__header">
-      <a href="index.html" class="mobile-menu__logo"><img src="portfolio-design-images/tcs-logo.png" alt="Toyo's Creative Space"></a>
-      <button class="mobile-menu__close" aria-label="Close navigation menu">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M16 2L2 16M2 2L16 16" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </button>
-    </div>
     <nav class="mobile-menu__nav">
       <a href="index.html" class="mobile-menu__link">Home</a>
+      <a href="about.html" class="mobile-menu__link">About</a>
       <a href="index.html#projects" class="mobile-menu__link">Work</a>
       <a href="https://drive.google.com/file/d/1CQYjmtOOulWqzke0gi_U4UttHId4qYxD/view?usp=drive_link" class="mobile-menu__link" target="_blank" rel="noopener noreferrer">Resume</a>
     </nav>
-    <div class="mobile-menu__actions">
-      <a href="https://cal.com/toyoscreativespace/project-discovery-call" class="mobile-menu__btn" target="_blank" rel="noopener noreferrer" aria-label="Book a call (opens in new tab)">&#128197; Book a Call &rarr;</a>
-    </div>
+    <a href="https://cal.com/toyoscreativespace/project-discovery-call" class="mobile-menu__btn" target="_blank" rel="noopener noreferrer" aria-label="Book a call (opens in new tab)">Book a Call</a>
     <div class="mobile-menu__illustration" aria-hidden="true">
       <img src="about-assets/teeny at work.png" alt="">
     </div>
@@ -48,9 +40,15 @@
           </svg>
         </button>
       </div>
-      <p class="mobile-menu__globe">🌐 Works round the Globe</p>
+      <p class="mobile-menu__globe"><img src="mobile menu/globe.svg" alt="" class="mobile-menu__globe-icon">Works round the Globe</p>
     </div>
   </div>
+
+  <!-- Mobile Menu Toggle (mobile only) -->
+  <button class="nav__hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+    <img src="mobile menu/menu.svg" alt="" class="nav__hamburger-icon">
+    <img src="mobile menu/cancel menu.png" alt="" class="nav__hamburger-close">
+  </button>
 
   <!-- Navigation -->
   <header>
@@ -63,11 +61,6 @@
       </div>
       <div class="nav__actions">
         <a href="https://cal.com/toyoscreativespace/project-discovery-call" class="nav__btn" target="_blank" rel="noopener noreferrer" aria-label="Book a call (opens in new tab)">Book a Call</a>
-        <button class="nav__hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
-          <span class="nav__hamburger-line"></span>
-          <span class="nav__hamburger-line"></span>
-          <span class="nav__hamburger-line"></span>
-        </button>
       </div>
     </nav>
   </header>
@@ -138,13 +131,30 @@
           <img src="about-assets/claude-skill.png" alt="Claude" class="tool-img">
         </div>
       </div>
+
+      <!-- Mobile tool images (shown only on mobile, hidden on desktop) -->
+      <div class="tools-grid--mobile" aria-hidden="true">
+        <div class="tools-row--mobile">
+          <img src="about-assets/figma-skill.png" alt="Figma" class="tool-img--mobile">
+          <img src="about-assets/github-skill.png" alt="GitHub" class="tool-img--mobile">
+          <img src="about-assets/antigravity-skill.png" alt="Antigravity" class="tool-img--mobile">
+        </div>
+        <div class="tools-row--mobile">
+          <img src="about-assets/slack-skill.png" alt="Slack" class="tool-img--mobile">
+          <img src="about-assets/chat-gpt-skill.png" alt="Chat GPT" class="tool-img--mobile">
+          <img src="about-assets/gemini-skill.png" alt="Gemini" class="tool-img--mobile">
+        </div>
+        <div class="tools-row--mobile">
+          <img src="about-assets/claude-skill.png" alt="Claude" class="tool-img--mobile">
+        </div>
+      </div>
     </section>
 
     <!-- FUN-IVITY -->
     <section class="about-funivity" aria-label="Fun-ivity, favourite activities">
       <div class="about-section-header about-section-header--padded">
         <img src="about-assets/orange star.png" alt="" class="about-star" aria-hidden="true">
-        <h2 class="about-section-title">Fun-ivity (My Favourite things to do)</h2>
+        <h2 class="about-section-title">Fun-ivity (Fun things to do)</h2>
       </div>
 
       <div class="funivity-stack" role="button" tabindex="0" aria-label="Click to expand favourite activities" aria-expanded="false">
@@ -159,14 +169,14 @@
           <img src="about-assets/reality-tv-fun.png" alt="Watching Reality TV" class="funivity-card__img" loading="lazy">
         </div>
 
-        <!-- Card 3: Traveling — z-index 2 -->
-        <div class="funivity-card">
-          <img src="about-assets/traveling-fun.png" alt="Traveling" class="funivity-card__img" loading="lazy">
-        </div>
-
-        <!-- Card 4: Fashion Modelling — bottom of stack, z-index 1 -->
+        <!-- Card 3: Fashion Modelling — z-index 2 -->
         <div class="funivity-card">
           <img src="about-assets/modeling-fun.png" alt="Fashion Modelling" class="funivity-card__img" loading="lazy">
+        </div>
+
+        <!-- Card 4: Traveling — bottom of stack, z-index 1 -->
+        <div class="funivity-card">
+          <img src="about-assets/traveling-fun.png" alt="Traveling" class="funivity-card__img" loading="lazy">
         </div>
 
       </div>

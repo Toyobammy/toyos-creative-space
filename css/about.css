@@ -269,6 +269,21 @@
   pointer-events: none;
 }
 
+/* Mobile tool card grid — hidden on desktop, revealed in mobile media query */
+.tools-grid--mobile {
+  display: none;
+}
+
+.tools-row--mobile {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.tool-card {
+  display: none;
+}
+
 /* ========================================
    RESPONSIVE — TABLET (≤1024px)
    ======================================== */
@@ -418,5 +433,276 @@
 
   .funivity-hint {
     margin-top: 16px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE — MOBILE (≤480px / 393px target)
+   ======================================== */
+
+@media (max-width: 480px) {
+
+  /* ── PAGE ──────────────────────────────── */
+  body {
+    background: #EBEBEB;
+  }
+
+  #main-content {
+    padding: 32px 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  /* ── PORTRAIT ──────────────────────────── */
+  .about-portrait {
+    padding: 0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+  }
+
+  .about-portrait__img {
+    width: 320px;
+    height: 330px;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  /* ── SECTION HEADERS ───────────────────── */
+  .about-section-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .about-star {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transform: rotate(46.51deg);
+    object-fit: contain;
+  }
+
+  .about-section-title {
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    line-height: 150%;
+  }
+
+  /* ── ABOUT TEXT ────────────────────────── */
+  .about-text {
+    width: 356px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-text__body {
+    gap: 16px;
+  }
+
+  .about-text__body p {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 150%;
+    color: #333333;
+  }
+
+  /* ── SKILLS ────────────────────────────── */
+  .about-skills {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .skills-container {
+    width: 292px;
+    height: 736px;
+    background: #DCD5FF;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    overflow: visible;
+  }
+
+  /*
+   * Group 1 — badges are absolutely positioned within a fixed-height
+   * block so each sits at top: 0, 64, 128, 192, 256, 320px
+   * (64px from top-edge to top-edge, badge height 40px → 24px visual gap)
+   */
+  .skills-row:nth-child(1) {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 360px;
+    flex-shrink: 0;
+    gap: 0 !important;
+  }
+
+  .skills-row:nth-child(1) .skill-badge {
+    position: absolute;
+    left: 0;
+  }
+
+  .skills-row:nth-child(1) .skill-badge:nth-child(1) { top: 0;    width: 116px; }
+  .skills-row:nth-child(1) .skill-badge:nth-child(2) { top: 64px; width: 105px; }
+  .skills-row:nth-child(1) .skill-badge:nth-child(3) { top: 128px; width: 183px; }
+  .skills-row:nth-child(1) .skill-badge:nth-child(4) { top: 192px; width: 173px; }
+  .skills-row:nth-child(1) .skill-badge:nth-child(5) { top: 256px; width: 116px; }
+  .skills-row:nth-child(1) .skill-badge:nth-child(6) { top: 320px; width: 156px; }
+
+  /* Group 2 — normal flex column with 24px gap */
+  .skills-row:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 24px !important;
+  }
+
+  .skill-badge {
+    height: 40px;
+    flex-shrink: 0;
+    background: #4C25A7;
+    border-radius: 12px;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .skill-badge__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    flex-shrink: 0;
+  }
+
+  .skill-badge__text {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    line-height: 150%;
+  }
+
+  /* ── TOOL STACKS ───────────────────────── */
+  .about-tools {
+    width: 100%;
+    align-self: stretch;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tools-grid {
+    display: none;
+  }
+
+  .tools-grid--mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .tools-row--mobile {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .tool-img--mobile {
+    width: 83px;
+    height: 101px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  /* ── FUN-IVITY ─────────────────────────── */
+  .about-funivity {
+    align-self: stretch;
+    overflow: visible;
+  }
+
+  .about-section-header--padded {
+    width: auto;
+    margin: 0 0 16px;
+  }
+
+  .funivity-stack {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible;
+    cursor: default;
+    padding: 0 !important;
+  }
+
+  .funivity-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    display: block !important;
+    flex-shrink: 0;
+    width: 222px;
+    height: 277px;
+    background: transparent;
+    border: none !important;
+    overflow: visible;
+    margin: 0 !important;
+    transition: none;
+    z-index: auto !important;
+  }
+
+  .funivity-card:nth-child(1) { transform: rotate(-9.26deg) !important; }
+  .funivity-card:nth-child(2) { transform: rotate(11.9deg) !important; }
+  .funivity-card:nth-child(3) { transform: rotate(-8.75deg) !important; }
+  .funivity-card:nth-child(4) { transform: rotate(10.82deg) !important; }
+
+  .funivity-stack.unstacked .funivity-card {
+    transform: none !important;
+  }
+
+  .funivity-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* ── RESUME ────────────────────────────── */
+  .about-resume {
+    padding: 0;
+    justify-content: center;
+    align-self: stretch;
+  }
+
+  .about-resume__wrapper {
+    width: 334px;
+    margin: 0 auto;
+  }
+
+  .about-resume__img {
+    width: 100%;
+    height: auto;
   }
 }
