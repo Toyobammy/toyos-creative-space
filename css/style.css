@@ -760,6 +760,18 @@
   pointer-events: none;
 }
 
+/* Wave texture lines — subtle background ripples inside the water (desktop).
+   z-index:-1 keeps them behind the band text, sand and every illustrated
+   element regardless of DOM order, since this is just a background layer. */
+.site-footer__wave-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* ── Part 1: Top Info Band ── */
 
 .footer-band {
@@ -944,11 +956,21 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--font-family-primary);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-primary);
   white-space: nowrap;
   pointer-events: none;
+  text-align: center;
+}
+
+/* Offset text into the fish body (away from tail) for each fish orientation */
+.footer-sea__fw-yellow .footer-sea__fish-text {
+  left: 63%;
+}
+
+.footer-sea__fw-green .footer-sea__fish-text {
+  left: 37%;
 }
 
 /* Teeny in floater — sits on the wave, positioned relative to .site-footer */
@@ -1468,6 +1490,10 @@
     display: none !important;
   }
 
+  .site-footer__wave-line {
+    display: none;
+  }
+
   .site-footer__wave {
     position: absolute;
     top: 0;
@@ -1835,6 +1861,11 @@
     z-index: 2;
     font-size: 12px;
     white-space: nowrap;
+  }
+
+  .footer-sea__fw-yellow .footer-sea__fish-text,
+  .footer-sea__fw-green .footer-sea__fish-text {
+    left: 0;
   }
 
   /* ── Mobile Footer Animations ── */
