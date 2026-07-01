@@ -332,28 +332,31 @@ body {
     border-radius: 16px;
   }
 
-  /* ── Solutions: keep side by side on mobile (matching design reference) ── */
+  /* ── Solutions: side by side on mobile matching design reference ── */
   .spk-solutions-grid {
     grid-template-columns: 1fr 1.4fr;
     gap: 12px;
   }
 
   .spk-solutions-frame--bulb {
-    padding: 16px 10px;
-    min-height: 140px;
+    padding: 20px 12px;
+    min-height: 160px;
   }
 
   .spk-solutions-bulb-img {
-    max-width: 90px;
+    max-width: 110px;
   }
 
   .spk-solutions-frame--text {
-    padding: 14px 12px;
+    background: transparent;
+    border: none;
+    padding: 8px 4px;
     gap: 12px;
   }
 
   .spk-solutions-text {
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 1.65;
   }
 
   /* ── Key feature screen images ── */
